@@ -93,3 +93,31 @@ button {
   flex-direction: column;
   gap: 4px;
 }
+
+.hidden {
+  display: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.load-more {
+  margin: 20px auto;
+  padding: 10px 20px;
+  display: block;
+}
+
+.loader {
+  text-align: center;
+  margin: 10px;
+  font-size: 18px;
+}
