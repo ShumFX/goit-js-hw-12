@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Search App</title>
+    <!-- SimpleLightbox CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/simplelightbox/dist/simple-lightbox.min.css"
+      href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.css"
     />
     <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-DqB7j7Ix.js">
@@ -18,26 +15,37 @@
     <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-DMwUdzkg.css">
   </head>
   <body>
-    <header>
-      <h1 style="text-align: center">Image Search</h1>
+    <header class="header">
+      <div class="container">
+        <form class="form" id="search-form">
+          <input
+            type="text"
+            name="searchQuery"
+            class="input"
+            placeholder="Search images..."
+            autocomplete="off"
+          />
+          <button type="submit" class="btn">Search</button>
+        </form>
+      </div>
     </header>
 
     <main>
-      <form id="search-form" class="search-form">
-        <input
-          type="text"
-          name="searchQuery"
-          placeholder="Search images..."
-          autocomplete="off"
-        />
-        <button type="submit">Search</button>
-      </form>
-
-      <div class="gallery"></div>
-
-      <button class="load-more hidden">Load more</button>
-      <div class="loader hidden">Loading...</div>
+      <section class="gallery-section">
+        <ul class="gallery"></ul>
+        <button class="load-more is-hidden">Load more</button>
+        <span class="loader is-hidden"></span>
+      </section>
     </main>
 
+    <!-- SimpleLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.js"></script>
+    <!-- iziToast -->
+    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
+    />
+    <!-- Main JS -->
   </body>
 </html>
