@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Search App</title>
+    <!-- iziToast CSS (должен быть перед JS) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
+    />
     <!-- SimpleLightbox CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.css"
     />
     <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-DqB7j7Ix.js">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-CWKLx11g.css">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-DMwUdzkg.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-DGDcxXwr.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-BF6fPAxX.css">
   </head>
   <body>
     <header class="header">
@@ -24,6 +28,7 @@
             class="input"
             placeholder="Search images..."
             autocomplete="off"
+            required
           />
           <button type="submit" class="btn">Search</button>
         </form>
@@ -33,19 +38,15 @@
     <main>
       <section class="gallery-section">
         <ul class="gallery"></ul>
+        <span class="loader is-hidden">Loading...</span>
         <button class="load-more is-hidden">Load more</button>
-        <span class="loader is-hidden"></span>
       </section>
     </main>
 
     <!-- SimpleLightbox JS -->
     <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.js"></script>
-    <!-- iziToast -->
+    <!-- iziToast JS -->
     <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
-    />
     <!-- Main JS -->
   </body>
 </html>
